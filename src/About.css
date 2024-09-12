@@ -1,0 +1,12 @@
+.me-auto
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: white;
+    border: 1px solid;
+    height: 100%;
+    position: fixed;
+    overflow: outs;
+}
