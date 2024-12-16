@@ -1,4 +1,6 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import 'bootstrap/dist/js/bootstrap.bundle.min'; // Import Bootstrap JS
 import './Home.css'
@@ -62,6 +64,8 @@ import lock from './images/lock.jpeg';
 import payment from './images/payment.png';
 
 const Home = () => {
+    const [count, setCount] = useState(0);
+  
     return (
         <div>
             {/* Carousel */}
@@ -300,41 +304,57 @@ const Home = () => {
                     <div className="col-12 col-md-6 col-lg-3 mb-3">
                         <div className="card" style={{ width: '18rem' }}>
                             <img src={hd} className="card-img-top" alt="Birthday Gifts" />
+                            <center>
                             <div className="card-body">
-                                <p className="card-text">Home Decor</p>
+                                <p className="card-text"><b>Home Decor</b></p>
                             </div>
+                            </center>
                         </div>
                     </div>
                     <div className="col-12 col-md-6 col-lg-3 mb-3">
                         <div className="card" style={{ width: '18rem' }}>
                             <img src={tg} className="card-img-top" alt="Personalised Gifts" />
+                            <center>
                             <div className="card-body">
-                                <p className="card-text">Toys & Games</p>
+                                <p className="card-text"><b>Toys & Games</b></p>
                             </div>
+                            </center>
                         </div>
                     </div>
                     <div className="col-12 col-md-6 col-lg-3 mb-3">
                         <div className="card" style={{ width: '18rem' }}>
                             <img src={j} className="card-img-top" alt="Plants" />
+                            <center>
                             <div className="card-body">
-                                <p className="card-text">Jewellery</p>
+                                <p className="card-text"><b>Jewellery</b></p>
                             </div>
+                            </center>
                         </div>
                     </div>
                     <div className="col-12 col-md-6 col-lg-3 mb-3">
                         <div className="card" style={{ width: '18rem' }}>
                             <img src={i} className="card-img-top" alt="Chocolates" />
+                            <center>
                             <div className="card-body">
-                                <p className="card-text">Idols</p>
+                                <p className="card-text" ><b>Idols</b></p>
                             </div>
-                        </div>
+                            </center>
+                            </div>
                     </div>
                     <div className="col-12 col-md-6 col-lg-3 mb-3">
                         <div className="card" style={{ width: '18rem' }}>
                             <img src={tnc} className="card-img-top" alt="Fashion Gifts" />
+                            <center>
                             <div className="card-body">
-                                <p className="card-text">Tea n Coffee Hampers</p>
+                                <p className="card-text"><b>Tea n Coffee Hampers</b></p>
                             </div>
+
+                            <div>
+                            <h1 style={{color:'blue', fontSize:'20px'}}>Quantity: {count}</h1>
+                            <button type="submit" style={{backgroundColor:'green', color:'white'}} onClick={() => setCount(count + 1)}>ADD</button>
+                            </div>
+
+                            </center>
                         </div>
                     </div>
                     <div className="col-12 col-md-6 col-lg-3 mb-3">
@@ -345,6 +365,12 @@ const Home = () => {
                     </div>
                 </div>
             </div><br/><br/><br/><br/>
+
+
+            
+    
+ 
+
 
 
             {/* Additional Cards */}
